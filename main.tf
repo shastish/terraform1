@@ -1,12 +1,12 @@
 provider "aws" {
-   region = "us-east-1"
+   region = "ap-south-1"
 }
 #######################################################
 #Creating UAT VPC with CIDR: 172.16.0.0/16
 resource "aws_vpc" "uat_vpc" {
     cidr_block = "172.16.0.0/16" 
     tags = {
-        Name = "TEST_VPC"
+        Name = "test-vpc"
     }
 }
 output "uat_vpcid" {
