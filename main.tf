@@ -40,7 +40,7 @@ output "private_subnetid" {
   value = aws_subnet.uat_private_subnet.id
 }
 resource "aws_internet_gateway" "uat_igw" {
-    vpc_id                  = "vpc-06cf6bbd6dfc8ff3a"
+    vpc_id                  = "${aws_vpc.uat_vpc.id}"
   tags = {
     "Name" = "Test_IGW"
   }
